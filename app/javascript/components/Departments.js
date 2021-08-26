@@ -28,7 +28,7 @@ export default (props) => {
     <>
       <h1>Departments Here</h1>
       
-      {/* <a href={`/departments/new`}>Add New Department</a> */}
+      <a href={`/departments/new`}>Add New Department</a>
       {departments.map((department) => (
         <div>
           <h3>{department.name}</h3>
@@ -39,12 +39,12 @@ export default (props) => {
           {/* <a href={`/departments/${department.id}/items`}>
             show (goes to items#show)
           </a> */}
-          {/* <a href={`/departments/${department.id}/edit`}>
-            edit
+          <a href={`/departments/${department.id}/edit`}>
+            edit (goes to departments#edit)
           </a>
           <a href={`/departments/${department.id}`} data-method="delete">
-            delete
-          </a> */}
+            delete (goes to departments#destroy)
+          </a>
         </div>
       ))}
     </>
