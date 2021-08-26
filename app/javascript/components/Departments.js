@@ -28,16 +28,17 @@ export default (props) => {
     <>
       <h1>Departments Here</h1>
       
-      <a href={`/departments/new`}>Add New Department</a>
+      {/* <a href={`/departments/new`}>Add New Department</a> */}
       {departments.map((department) => (
         <div>
           <h3>{department.name}</h3>
+          {/* Links to departments#show and items#show*/ }
           <a href={`/departments/${department.id}`}>
             show (goes to departments#show)
           </a>
-          <a href={`/departments/${department.id}/topics`}>
-            show (goes to topics#show)
-          </a>
+          {/* <a href={`/departments/${department.id}/items`}>
+            show (goes to items#show)
+          </a> */}
           {/* <a href={`/departments/${department.id}/edit`}>
             edit
           </a>
