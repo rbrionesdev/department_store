@@ -34,16 +34,16 @@ export default (props) => {
           <h3>{department.name}</h3>
           {/* Links to departments#show and items#show*/ }
           <a href={`/departments/${department.id}`}>
-            show (goes to departments#show)
+            Details
           </a>
-          {/* <a href={`/departments/${department.id}/items`}>
+          <a href={`/departments/${department.id}/items`}>
             show (goes to items#show)
-          </a> */}
+          </a>
           <a href={`/departments/${department.id}/edit`}>
-            edit (goes to departments#edit)
+            Edit
           </a>
           <a href={`/departments/${department.id}`} data-method="delete">
-            delete (goes to departments#destroy)
+            Delete
           </a>
         </div>
       ))}
