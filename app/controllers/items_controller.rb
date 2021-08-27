@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
    if(@item.save)
     redirect_to department_items_path(@department.id)
    else
-    #TODO
+    render :new
    end
   end
 
@@ -32,7 +32,7 @@ class ItemsController < ApplicationController
     if(@item.update(item_params))
       redirect_to department_items_path(@department.id)
     else
-      #TODO
+      render :edit
     end
   end
 

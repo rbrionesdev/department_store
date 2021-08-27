@@ -17,7 +17,7 @@ class DepartmentsController < ApplicationController
   end
 
   def new
-    render component: "DepartmentNew" #be the form #private
+    render component: "DepartmentNew"
   end
 
   def create
