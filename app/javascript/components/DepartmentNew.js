@@ -11,7 +11,7 @@ const DepartmentNew = () => {
         <input name="department[manager]" />
         <p># Employees:</p>
         <input name="department[n_employees]" />
-        <button type="submit">add</button>
+        <button type="submit">Add</button>
       </form>
     </div>
   );
