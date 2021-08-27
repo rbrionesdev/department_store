@@ -1,45 +1,45 @@
 class ItemsController < ApplicationController
   before_action :set_department
-  # before_action :set_topic, only: [:show,:edit, :update, :destroy]
+  before_action :set_topic, only: [:show,:edit, :update, :destroy]
 
   def index
-    render component: "Items", props:{department: @department, items: @department.items}
+    render component: "Items", props:{department:@department, items:@department.items}
   end
 
   def new
-    # render component: "NewTopic", props:{sub:@sub, x:1, t:'this is t'}
+    # render component: "ItemNew", props:{department:@department, x:1, t:'this is t'}
   end
 
   def edit
-    # render component: "EditTopic", props:{sub:@sub, topic:@topic}
+    # render component: "ItemEdit", props:{department:@department, item:@item}
   end
 
   def create
-  #  @topic = @sub.topics.new(topic_params)
-  #  if(@topic.save)
-  #   redirect_to sub_topics_path(@sub.id)
+  #  @item = @department.items.new(item_params)
+  #  if(@item.save)
+  #   redirect_to department_items_path(@department.id)
   #  else
-  #   # todo handle bad input
+  #   #TODO
   #  end
   end
 
   def update
-    # if(@topic.update(topic_params))
-    #   redirect_to sub_topics_path(@sub.id)
+    # if(@item.update(item_params))
+    #   redirect_to department_items_path(@department.id)
     # else
-    #      # todo handle bad input
+    #   #TODO
     # end
   end
 
   def show
-    # @topic = @sub.topics.find(params[:id])
-    # # render json: @topic
-    # render component: "Topic", props: {topic:@topic, comments:@topic.comments}
+    # @item = @department.items.find(params[:id])
+    # # render json: @item
+    render component: "Item", props: {item:@item, department:@department}
   end
 
   def destroy
-    # @topic.destroy
-    # redirect_to sub_topics_path(@sub.id)
+    # @item.destroy
+    # redirect_to department_items_path(@department.id)
   end
  
   private
@@ -53,7 +53,7 @@ class ItemsController < ApplicationController
     @department = Department.find(params[:department_id])
   end
 
-  # def set_topic
-  #   @topic = @sub.topics.find(params[:id])
-  # end
+  def set_topic
+    @item = @department.items.find(params[:id])
+  end
 end

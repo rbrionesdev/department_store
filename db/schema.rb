@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_204241) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.boolean "available"
+    t.string "available"
     t.bigint "department_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

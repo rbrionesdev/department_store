@@ -37,7 +37,7 @@ export default (props) => {
             Details
           </a>
           <a href={`/departments/${department.id}/items`}>
-            show (goes to items#show)
+            Show Items
           </a>
           <a href={`/departments/${department.id}/edit`}>
             Edit
